@@ -6,6 +6,11 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
+    if (!window.OTPCredential) {
+      alert("Feature Not Available");
+    } else {
+      alert("Feature Available");
+    }
     if ("OTPCredential" in window) {
       const ac = new AbortController();
 
